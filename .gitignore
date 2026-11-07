@@ -1,0 +1,17 @@
+﻿# build
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.pdb
+
+# 앱 데이터/캐시 (개인 환경)
+data/
+pics-cache/
+imgcache/
+*.log
+
+# 작업 백업 파일
+*.bak-*
+*.tmp

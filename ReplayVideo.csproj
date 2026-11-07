@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AssemblyName>ReplayVideo</AssemblyName>
+    <RootNamespace>ReplayVideo</RootNamespace>
+    <Version>0.6.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.14" />
+    <PackageReference Include="SharpCompress" Version="0.48.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- 리플레이 파서/카드DB는 편집기 소스 재사용 (링크 컴파일) -->
+    <Compile Include="..\WindBotAIEditor\Services\ReplayParser.cs" Link="ReplayParser.cs" />
+    <Compile Include="..\WindBotAIEditor\Services\CardDatabase.cs" Link="CardDatabase.cs" />
+    <!-- 상태 머신은 안드로이드 앱과 공용(정본) -->
+    <Compile Include="..\_shared\ReplaySim.cs" Link="ReplaySim.cs" />
+  </ItemGroup>
+</Project>

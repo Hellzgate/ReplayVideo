@@ -1,0 +1,11 @@
+<Project>
+
+  <PropertyGroup>
+    <!-- 빌드 산출물(bin/obj)을 C: 대신 D: 로 보낸다 (C: 용량 부족 · 2026-11-06) -->
+    <!-- D: 가 없는 PC 라면 이 파일을 지우거나 경로를 바꾸세요. -->
+    <BaseOutputPath>D:\_proj\build\$(MSBuildProjectName)\bin\</BaseOutputPath>
+    <BaseIntermediateOutputPath>D:\_proj\build\$(MSBuildProjectName)\obj\</BaseIntermediateOutputPath>
+    <MSBuildProjectExtensionsPath>D:\_proj\build\$(MSBuildProjectName)\obj\</MSBuildProjectExtensionsPath>
+  </PropertyGroup>
+
+</Project>
